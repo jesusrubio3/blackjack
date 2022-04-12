@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Kyndryl Aprovisionemiento Kubernetes</h1>
+        <picture>
+            <img src="./logo.png" id="logo" alt="logo">
+        </picture>
+    </header>
+    <div id="enlaces">
+        <a id="enlace_managment" href="#managment" onclick="myFunction1()">Managment</a>
+        <a id="enlace_app" href="#app" onclick="myFunction2()">App</a>
+        <a id="enlace_infraestructure" href="#infraestructure" onclick="myFunction3()">Infrastructure</a>
+    </div>
+    <div class="container">
+        <div class="datos" id="managment">
+            <!-- summary -->
+            <div id="summary" class="box-managment">
+                <label>Summary</label>
+                    <input type="text" />
+            </div>
+            <br>
+            <!-- area -->
+            <div id="area" class="box-managment">
+                <label id="area">Area</label>
+                    <select id="area1">
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                    </select>
+            </div>
+            <br>
+            <!-- owner -->
+            <div id="owner" class="box-managment">
+                <label id="owner">Owner</label>
+                    <select id="owner1">
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                    </select>
+            </div>
+            <br>
+            <!-- users -->
+            <div id="users" class="box-managment">
+                <label id="users">Users</label>
+                <input type="button" class="btn btn-success" id="add_cancion()" onClick="addUser()" value="Añadir Nuevo Usuario" />
+                <input type="button" class="btn btn-success mas_menos" id="add_cancion()" onClick="removeUser()" value="Borrar Último Usuario" />
+                <div style="clear:both" class="repositorio_0' col-md-offset-1 col-md-6"><input id="addusuarios" class="form-control" size="32" placeholder="nombre usuario" name="usuario_0" type="text"/></div>
+                <div class="row" id="grafana"></div>
+            </div>
+            <br>
+            <!-- repositorie -->
+            <div class="box-managment" id="add">
+                <label id="add1">Repositorio Git</label>
+                  <input type="button" class="btn btn-success" id="add_cancion()" onClick="addRepo()" value="Añadir Repositorio" />
+                  <input type="button" class="btn btn-success mas_menos" id="add_cancion()" onClick="removeRepo()" value="Borrar Repositorio" />
+                <div class="row" id="repositorios"></div>
+            </div>
+        </div>
+
+
+        <div class="datos" id="app">
+            <!-- application name-->
+            <div id="applicationname" class="box-managment">
+                <label>Application Name</label>
+                    <input type="text" />
+            </div>
+            <br>
+            <!-- application type-->
+            <div id="aplicationtype" class="box-managment">
+                <label id="aplicationtype">Aplication Type</label>
+                    <select id="aplicationtype1">
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                    </select>
+            </div>
+            <br>
+             <!-- readme-->
+             <div id="readme" class="box-managment">
+                <label>Readme File</label>
+                    <input type="text" />
+            </div>
+            <br>
+            <!-- programming language-->
+            <div id="programming" class="box-managment">
+                <label id="programming">Programming Languaje</label>
+                    <select id="programming1">
+
+                        <option value="">None</option>
+
+                        <option value="">JavaScript</option>
+
+                        <option value="">Java</option>
+
+                        <option value="">Python/option>
+
+                        <option value="">PHP</option>
+
+
+                    </select>
+            </div>
+
+            <!--Database-->
+            <div id="database" class="box-managment">
+                <label id="database">Install Database:</label>
+                <select id="item1" required name="database">
+  
+                  <option value="no">No</option>
+  
+                  <option value="mysql">Mysql</option>
+  
+                  <option value="postgresql">PostgreSql</option>
+  
+                </select>
+            </div>
+            <br>
+            <!-- size database-->
+            <div id="size" class="box-managment">
+                <label>Size Database (GB)</label>
+                    <input type="text" />
+            </div>
+            <br>
+            <!-- critically-->
+            <div id="critically" class="box-managment">
+                <label id="critically">Criticality</label>
+                    <select id="critically1">
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                    </select>
+            </div>
+
+        </div>
+        <div class="datos" id="infraestructure">
+            <!-- Environments-->
+            <div id="environments" class="box-managment">
+                <p>Environments: </p>
+                    <div id="lista">
+                        <ul>
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                            <label for="checkbox1">PRO</label>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                            <label for="checkbox1">PRE</label>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                            <label for="checkbox1">DEV</label>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                            <label for="checkbox1">POC</label>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                            <label for="checkbox1">SandBox</label>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                            <label for="checkbox1">TEST</label>
+                        </ul>
+                    </div>
+
+            </div>
+
+            <!-- base-->
+            <div id="base" class="box-managment">
+                <label id="base">Base Infraestructure</label>
+                    <select id="base1">
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                        <option value="">None</option>
+
+                    </select>
+            </div>
+            <br>
+            <!-- technology-->
+           <div id="technology" class="box-managment">
+            <label id="technology">Technology</label>
+                <select id="technology1">
+
+                     <option value="">None</option>
+
+                     <option value="">None</option>
+
+                     <option value="">None</option>
+
+                 </select>
+            </div>
+            <br>
+             <!-- backup-->
+           <div id="backup" class="box-managment">
+            <label id="backup">Backup Level</label>
+                <select id="backup1">
+
+                     <option value="">None</option>
+
+                     <option value="">None</option>
+
+                     <option value="">None</option>
+
+                 </select>
+            </div>
+            <br>
+            <!-- monitoring -->
+           <div id="monitoring" class="box-managment">
+            <label id="monitoring">Monitoring Level</label>
+                <select id="monitoring1">
+
+                     <option value="">None</option>
+
+                     <option value="">None</option>
+
+                     <option value="">None</option>
+
+                 </select>
+            </div>
+            <br>
+            
+
+            
+        </div>
+        <div class="datos" id="crear">
+            <input type="button" class="btn btn-success" value="CREAR" />
+        </div>
+    </div>
+
+    <script>
+  function myFunction1() {
+  var x = document.getElementById("managment");
+  var y = document.getElementById("app");
+  var z = document.getElementById("infraestructure");
+  var w = document.getElementById("enlace_managment");
+  var l = document.getElementById("enlace_app");
+  var o = document.getElementById("enlace_infraestructure");
+
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.color = "#000000 ";
+    l.style.color = "#3f7dd8";
+    o.style.color = "#3f7dd8";
+  
+  };
+
+  function myFunction2() {
+  var x = document.getElementById("managment");
+  var y = document.getElementById("app");
+  var z = document.getElementById("infraestructure");
+  var w = document.getElementById("enlace_app");
+  var l = document.getElementById("enlace_managment");
+  var o = document.getElementById("enlace_infraestructure");
+    x.style.display = "none";
+    y.style.display = "block";
+    z.style.display = "none";
+    w.style.color = "#000000 ";
+    l.style.color = "#3f7dd8";
+    o.style.color = "#3f7dd8";
+  };
+
+  function myFunction3() {
+  var x = document.getElementById("managment");
+  var y = document.getElementById("app");
+  var z = document.getElementById("infraestructure");
+  var w = document.getElementById("enlace_infraestructure");
+  var l = document.getElementById("enlace_app");
+  var o = document.getElementById("enlace_managment");
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+    w.style.color = "#000000 ";
+    l.style.color = "#3f7dd8";
+    o.style.color = "#3f7dd8";
+  };
+
+  b = 0;
+  function addUser(){
+        b++;
+
+        var div = document.createElement('div');
+        div.setAttribute('class', 'form-inline');
+            div.innerHTML = '<div style="clear:both" class="repositorio_'+b+' col-md-offset-1 col-md-6"><input id="addusuarios" class="form-control" size="32" placeholder="nombre usuario" name="usuario_'+b+'" type="text"/></div>';
+            document.getElementById('grafana').appendChild(div);document.getElementById('grafana').appendChild(div);
+    };
+
+    function removeUser(){
+        if(b>0){
+            b--;
+            document.getElementById('grafana').removeChild(document.getElementById('grafana').lastChild);
+        
+        }
+    };
+
+
+    c=0;
+        document.getElementById("item1").onchange = message;
+        function message() {
+            
+          var value = this.value
+          console.log(c);
+            
+           if(c>0){
+            
+              document.getElementById('database').removeChild(document.getElementById('database').lastChild);
+                c--;
+            }
+            
+
+            
+            if(item1 == 'no') {
+                c++;
+            } else if(value == 'mysql') {
+              
+              var div = document.createElement('select');
+                div.setAttribute('class', 'col-12');
+                    div.innerHTML = '<select id="item_'+c+'" class="vv" required name="database"><option value="8.0">8.0</option><option value="5.7">5.7</option><option value="5.6">5.6</option></select>';
+                    document.getElementById('database').appendChild(div);document.getElementById('database').appendChild(div);
+                    c++;
+            } else if(value == 'postgresql') {
+              var div = document.createElement('select');
+                div.setAttribute('class', 'col-12');
+                    div.innerHTML = '<select id="item_'+c+'" class="vv"  required name="database"><option value="14">14</option><option value="13">13</option><option value="12">12</option></select>';
+                    document.getElementById('database').appendChild(div);document.getElementById('database').appendChild(div);
+                    c++;
+            };
+          };
+
+          a = 1;
+function addRepo(){
+        a++;
+
+        var div = document.createElement('div');
+        div.setAttribute('class', 'form-inline');
+            div.innerHTML = '<div style="clear:both" class="repositorio_'+a+' col-md-offset-1 col-md-6"><input  id="addrepo" class="form-control" size="32" placeholder="nombre repositorio" name="repositorio_'+a+'" type="text"/></div>';
+            document.getElementById('repositorios').appendChild(div);document.getElementById('repositorios').appendChild(div);
+};
+
+function removeRepo(){
+    if(a>1){
+        a--;
+        document.getElementById('repositorios').removeChild(document.getElementById('repositorios').lastChild);
+    }
+};
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./index.css"
+      rel="stylesheet" type="text/css">
+</head>
+<body>
+    <a href="#myDIV" onclick="myFunction1()">Try it</a>
+    <a href="#myDIV2" onclick="myFunction2()">Try it</a>
+    <a href="#myDIV3" onclick="myFunction3()">Try it</a>
+    
+    <div id="myDIV"> Bloque 1</div>
+    <div id="myDIV2">Bloque 2</div>
+    <div id="myDIV3">Bloque 3</div>
+
+<script>
+    function myFunction1() {
+  var x = document.getElementById("myDIV");
+  var y = document.getElementById("myDIV2");
+  var z = document.getElementById("myDIV3");
+
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+  
+  };
+
+  function myFunction2() {
+  var x = document.getElementById("myDIV");
+  var y = document.getElementById("myDIV2");
+  var z = document.getElementById("myDIV3");
+    x.style.display = "none";
+    y.style.display = "block";
+    z.style.display = "none";
+  
+  };
+
+  function myFunction3() {
+  var x = document.getElementById("myDIV");
+  var y = document.getElementById("myDIV2");
+  var z = document.getElementById("myDIV3");
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+  
+  };
+
+
+
+
+
+</script>
+</body>
+</html>

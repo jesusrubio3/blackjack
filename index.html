@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>Document</title>
+</head>
+<body>
+    <header>
+        Blackjack
+    </header>
+    <div id="container" class="text-center">
+        <div id="botones">
+            <p id="marca">Jugador - <span id="marcadortotaljugador">0</span></p>
+            <p id="marca">Dealer - <span id="marcadortotalpc">0</span></p>
+            <button id="otrapartida" type="button" class="btn btn-primary ml-3">Nuevo Juego</button>
+            <button id="otracarta" type="button" class="btn btn-primary ml-3">Otra Carta</button>
+            <button id="novamas" type="button" class="btn btn-primary ml-3">No va más</button>
+        </div>
+       
+        <div id="jugador" class="text-left ml-3">
+            
+            <p>Jugador - <span id="marcadorjugador">0</span></p>
+            <div id="cartasJugador">
+
+
+            </div>
+        </div>
+
+        <div id="dealer" class="text-left ml-3">
+            <p>Dealer - <span id="marcadorpc">0</span></p>
+            <div id="cartasPc">
+
+
+            </div>
+        </div>
+    </div>
+    <script src= "https://underscorejs.org/underscore-min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
